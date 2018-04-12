@@ -1,25 +1,30 @@
 package pers.dwl.lighting.domain;
+
+import javax.validation.constraints.NotEmpty;
+
 /**
  * 用户实体类
  */
 public class User {
-
-    private String id;
-
+    /*用户主键*/
+    private String userId;
+    /*用户名*/
+    @NotEmpty(message = "用户名不能为空")
     private String userName;
-
+    /*密码*/
+    @NotEmpty(message = "密码不能为空")
     private String userPwd;
-
+    /*性别*/
     private String sex;
-
+    /*状态*/
     private String status;
 
-    public String getId() {
-        return id;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getUserName() {
