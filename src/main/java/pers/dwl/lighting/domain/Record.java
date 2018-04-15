@@ -1,5 +1,8 @@
 package pers.dwl.lighting.domain;
 
+
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import java.util.Date;
 
 /**
@@ -13,6 +16,8 @@ public class Record {
     /*主键*/
     private int id;
     /*体重数*/
+    @Min(value = 0,message = "最小值为0")
+    @Max(value = 200,message = "最大值为200")
     private double weight;
     /*记录日期*/
     private Date date;
